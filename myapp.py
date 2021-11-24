@@ -16,18 +16,22 @@ tickerDf = tickerData.history(period='1d', start='2010-5-31', end='2021-10-31')
 
 # tickerData.info
 # info on the company
-tickerData.splits
+# tickerData.splits
+st.write("""
+## TSLA news
+""")
 tickerData.news
-tickerData.calendar
-# get event data for ticker
+st.write("""
+## Recommendation by experts
+""")
 tickerData.recommendations
 # get recommendation data for ticker
 st.write("""
-## Closing per day
+## Closing Price
 """)
 st.line_chart(tickerDf.Close)
 
 st.write("""
-## Volume sold per day
+## Volume 
 """)
 st.line_chart(tickerDf.Volume)
